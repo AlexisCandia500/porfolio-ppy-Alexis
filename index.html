@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6; /* Ajusta el espacio entre líneas */
+        }
+    </style>
     <title>Portafolio Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="menu-fijo">
         <ul>
           <a href="#acerca-de-mi">Acerca de mí</a>
           <a href="#habilidades">Habilidades</a>
@@ -14,7 +22,7 @@
           <a href="#contacto">Contacto</a>
         </ul>
       </nav>
-      <h1>Alexis Candia Figueredo</h1>
+      <h1 class="animacion-titulo">Alexis Candia Figueredo</h1>
       <h2>Ingeniero Informático</h2>
     </header>
     <main>
@@ -85,25 +93,32 @@
       <section id="contacto">
         <h2>Contacto</h2>
         <ul>
-          <li>Email: alexisfigueredo0@gmail.com</li>
-          <li>Teléfono: 0975149181</li>
-          <li>
-            Redes Sociales:
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/tucuenta">Facebook</a>
-              </li>
-              <li>
-                <a href="https://twitter.com/tucuenta">Twitter</a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/tucuenta">LinkedIn</a>
-              </li>
-              <!-- Agrega más redes sociales si lo deseas -->
-            </ul>
-          </li>
+            <li>Email: alexisfigueredo0@gmail.com</li>
+            <li>Teléfono: 0975149181</li>
+            <li>
+                Redes Sociales:
+                <ul class="redes-sociales">
+                    <li>
+                        <a href="https://www.facebook.com/tucuenta" target="_blank" rel="noopener noreferrer">
+                            <br>
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/tucuenta" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/tucuenta" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
+                    <!-- Agrega más redes sociales si lo deseas -->
+                </ul>
+            </li>
         </ul>
-      </section>
+    </section>
     </main>
     <footer>
       <p>Copyright &copy; 2024</p>
