@@ -129,6 +129,21 @@ section {
     color: #555;
 }
 
+/* Estilos de listas en secciones específicas */
+#habilidades ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#habilidades ul li {
+    margin-bottom: 10px;
+}
+
+#habilidades ul li strong {
+    font-weight: bold;
+}
+
 /* Estilos del formulario de contacto */
 #contacto form {
     margin: 0 auto;
