@@ -18,17 +18,19 @@ header {
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: relative; /* Añadido */
-    z-index: 1; /* Añadido */
+    position: fixed; /* Ajustado para mantener fijo en la parte superior */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 /* Estilos de los encabezados (h1, h2) */
 h1, h2 {
     margin: 0;
+    font-weight: 800; /* Fuente más negrita */
 }
 
 h2 {
-    color: blue;
+    color: #3498db; /* Azul más suave */
     margin-bottom: 10px;
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -37,122 +39,71 @@ h2 {
 
 /* Estilos de la navegación */
 nav {
-    list-style: none;
+    text-align: center;
+}
+
+nav ul {
     padding: 0;
     margin: 0;
-    text-align: center;
-    margin-bottom: 20px;
-    z-index: 2; /* Añadido */
+    list-style: none;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
-    padding: 10px;
+    color: #fff;
+    padding: 10px 15px;
     display: inline-block;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Añadido */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #ddd;
-    color: #555;
-    border-radius: 3px;
-}
-
-/* Fondo negro de superposición */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Añadido */
-    z-index: 1;
-    transition: opacity 0.3s ease; /* Añadido */
-}
-
-.overlay.active {
-    display: block;
-    opacity: 1;
-}
-
-/* JavaScript para activar y desactivar el fondo negro */
-.overlay-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #fff;
-    cursor: pointer;
+    background-color: #555;
 }
 
 /* Estilos del contenido principal */
 main {
     max-width: 800px;
-    margin: 0 auto;
-    position: relative; /* Añadido */
-    z-index: 2; /* Añadido */
+    margin: 100px auto 20px; /* Añadido margen superior para compensar el header fijo */
+    padding: 20px;
 }
 
 section {
     background-color: #fff;
-    padding: 20px;
     border: 1px solid #ddd;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 /* Estilos de listas en secciones específicas */
-#experiencia ul,
-#proyectos ul,
-#habilidades ul {
+section ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-#experiencia ul li,
-#proyectos ul li,
-#habilidades ul li {
+section ul li {
     margin-bottom: 10px;
 }
 
-#experiencia ul li strong,
-#habilidades ul li strong {
+section ul li strong {
     font-weight: bold;
 }
 
-#proyectos ul li a,
-#habilidades ul li a {
+section ul li a {
     text-decoration: none;
     color: #333;
     transition: color 0.3s ease;
 }
 
-#proyectos ul li a:hover,
-#habilidades ul li a:hover {
+section ul li a:hover {
     color: #555;
-}
-
-/* Estilos de listas en secciones específicas */
-#habilidades ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#habilidades ul li {
-    margin-bottom: 10px;
-}
-
-#habilidades ul li strong {
-    font-weight: bold;
 }
 
 /* Estilos del formulario de contacto */
 #contacto form {
+    max-width: 500px;
     margin: 0 auto;
-    width: 500px;
     background-color: #fff;
     padding: 20px;
     border: 1px solid #ddd;
@@ -214,7 +165,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 1000;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
@@ -239,3 +190,28 @@ section {
         transform: translateY(0);
     }
 }
+
+/* Media Queries para hacer el diseño responsive */
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        padding: 8px 12px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    #contacto form {
+        max-width: 100%;
+    }
+}
+
