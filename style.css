@@ -104,28 +104,33 @@ section {
 
 /* Estilos de listas en secciones específicas */
 #experiencia ul,
-#proyectos ul {
+#proyectos ul,
+#habilidades ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 #experiencia ul li,
-#proyectos ul li {
+#proyectos ul li,
+#habilidades ul li {
     margin-bottom: 10px;
 }
 
-#experiencia ul li strong {
+#experiencia ul li strong,
+#habilidades ul li strong {
     font-weight: bold;
 }
 
-#proyectos ul li a {
+#proyectos ul li a,
+#habilidades ul li a {
     text-decoration: none;
     color: #333;
     transition: color 0.3s ease;
 }
 
-#proyectos ul li a:hover {
+#proyectos ul li a:hover,
+#habilidades ul li a:hover {
     color: #555;
 }
 
